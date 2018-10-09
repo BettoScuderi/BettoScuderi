@@ -31,7 +31,7 @@
 					}
 				nav {
 					  float: right;
-					  max-height: 0;
+					  max-height: 100;
 					  width: 100%;
 					  -webkit-transition: max-height 0.3s; 
 					     -moz-transition: max-height 0.3s;
@@ -41,7 +41,7 @@
 				nav ul {
 					  margin: 0;
 					  padding: 0;
-					   padding-bottom: 10px;
+					  padding-bottom: 10px;
 					}
 				nav li {
 					  display: block;
@@ -53,22 +53,11 @@
 					}
 				#nav { display: none; }
 				#nav:checked ~ nav {
-					  max-height: 200px; /* This can be anything bigger than your nav height. The transition duration works with this */
+					  max-height: 100px; /* This can be anything bigger than your nav height. The transition duration works with this */
 					}
-				@media only screen and (min-width: 700px) {
-				header label { display: none; }
-				nav {
-					    width: auto;
-					    max-height: none;
-					  }
-			 	nav ul {
-					    padding: 0;
-					    padding-right: 10px;
-					  }
-				nav li {
-					    display: inline-block;
-					    text-align: left;
-					  }
+				@media only screen and (max-width: 400px) { 
+					header label { display: none; }
+				
 				header nav a {
 					    display: inline-block;
 					    padding: 20px 10px;
@@ -80,22 +69,23 @@
 					background: #f6f6f6;
 				}
 				.countdownContainer{
-					position: absolute;;
+					position: absolute;
 					top: 50%;
 					left: 50%;
 					transform : translateX(-50%) translateY(-50%);
 					text-align: center;
 					background: #ddd;
-					border: 1px solid #999;
+					border: 3px solid #999;
 					padding: 10px;
 					box-shadow: 0 0 5px 3px #ccc;
+					
 				}
 				.info {
-					font-size: 80px;
+					font-size: 60px;
 				}
 				p {
 				  text-align: center;
-				  font-size: 60px;
+				  font-size: 40px;
 				  margin-top: 0px;
 				}
 			</style>
@@ -107,14 +97,13 @@
 			  <a class="logo">Countdown</a>
 
 			  <input id="nav" type="checkbox">
-			  <label for="nav"></label>
+			 <!-- <label for="nav"></label> -->
 
 			  <nav>
 			    <ul>
 			      <li><a href="index.html">Lucca in The Woods</a></li>
 			      <li><a href="#">18esimo</a></li>
-			      <li><a href="milan.html">Milano</a></li>
-			      
+			      <li><a href="milan.html">Milano</a></li>   
 			    </ul>
 			  </nav> 
 
