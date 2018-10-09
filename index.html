@@ -1,176 +1,99 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		  
-    			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">  
-      			<link rel="stylesheet" href="css/style.css">
-			<style>
-				header {
-					  overflow: hidden;
-					  background: #222;
-					}
+<!DOCTYPE html>
 
-					header a, header label {
-					  display: block;
-					  padding: 20px;
-					  color: #fff;
-					  text-decoration: none;
-					  line-height: 20px;
-					}
 
-				header a:hover, header label:hover { color: #aaa; }
-
-				header label {
-					  float: right;
-					  padding: 18px 20px;
-					  cursor: pointer;
-					}
-
-				header label:after {
-					  content: "\2261";
-					  font-size: 1.8em;
-					}
-
-				.logo {
-					  float: left;
-					  font-weight: bold;
-					  font-size: 1.5em;
-					}
-
-				nav {
-					  float: right;
-					  max-height: 100;
-					  width: 100%;
-					  -webkit-transition: max-height 0.3s; 
-					     -moz-transition: max-height 0.3s;
-					       -o-transition: max-height 0.3s;
-						  transition: max-height 0.3s;
-					}
-
-				nav ul {
-					  margin: 0;
-					  padding: 0;
-					  padding-bottom: 10px;
-					}
-
-				nav li {
-					  display: block;
-					  text-align: center;
-					}
-
-				nav a {
-					  padding: 10px;
-					  width: 100%;
-					}
-
-				#nav { display: none; }
-
-				#nav:checked ~ nav {
-					  max-height: 100px; /* This can be anything bigger than your nav height. The transition duration works with this */
-					}
-
-				@media only screen and (max-width: 400px) { 
-					header label { display: none; }
-
-				
-
-				header nav a {
-					    display: inline-block;
-					    padding: 20px 10px;
-					    width: auto;
-					  }
-
-					}
-	
-				body {
-					background: #f6f6f6;
-				}
-				.countdownContainer{
-					position: absolute;
-					top: 50%;
-					left: 50%;
-					transform : translateX(-50%) translateY(-50%);
-					text-align: center;
-					background: #ddd;
-					border: 3px solid #999;
-					padding: 10px;
-					box-shadow: 0 0 5px 3px #ccc;
-					
-				}
-				.info {
-					font-size: 60px;
-				}
-
-				p {
-				  text-align: center;
-				  font-size: 40px;
-				  margin-top: 0px;
-				}
-			</style>
-		</head>
-	<body>
-		
-		<header>
+<head>
+  <meta charset="UTF-8">
+  <title>Stripe.com Style Dropdown Menu</title>
   
-			  <a class="logo">Countdown</a>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 
-			  <input id="nav" type="checkbox">
-			 <!-- <label for="nav"></label> -->
+  
+      <link rel="stylesheet" href="css/style.css">
 
-			  <nav>
-			    <ul>
-			      <li><a href="#">Lucca in The Woods</a></li>
-			      <li><a href="18esimo.html">18esimo</a></li>
-			      <li><a href="milan.html">Milano</a></li>   
-			    </ul>
-			  </nav> 
+  
+</head>
 
-		</header>
-		<!-- Menu -->
-		<!-- <div id="nav" align="center">
-			<a>Lucca in the Woods</a>
-			<a href="18esimo.html">18esimo</a>
-			<a href="milan.html">Milano</a>
-			-->
-			 
-		
-		<p id="demo" class="countdownContainer">
+<body>
 
-		</p>
+  
+<header class="main-header">
+	  <ul class="menu">
+		<li class="menu__item" data-sub="product"><a href="#">Home</a></li>
+		<li class="menu__item" data-sub="developer"><a href="#">Countdown</a></li>
+		<!-- <li class="menu__item" data-sub="company"><a href="#">Company</a></li> -->
+	  </ul>
+	  <div class="dropdown-holder">
+		<div class="dropdown__arrow"></div>
+		<div class="dropdown__bg">
+		  <div class="dropdown__bg-bottom"></div>
+		</div>
+		<div class="dropdown__wrap">
+		  <div class="dropdown-menu" id="product" data-sub="product">
+			<div class="dropdown-menu__content">
+			  <div class="top-section">
+				<div class="col-2">
+				  <ul>
+					<li><a href="">
+						<h3>Payment</h3>
+						<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p></a></li>
+					<li><a href="">
+						<h3>Connect</h3>
+						<p> consectetur adipisicing elit nesciunt! Assumenda, adipisci.</p></a></li>
+					<li><a href="">
+						<h3>Atlas</h3>
+						<p> ipsum dolor sit amet, consectetur adipisicing elit. .</p></a></li>
+				  </ul>
+				  <ul>
+					<li><a href="">
+						<h3>Subscription</h3>
+						<p> Lorem ipsum dolor sit amet, consectetur </p></a></li>
+					<li><a href="">
+						<h3>Relay</h3>
+						<p>  amet, consectetur adipisicing elit. Nisi, sequi!</p></a></li>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="bottom-section">
+				<ul>
+				  <li><a href="">Payment</a></li>
+				  <li><a href="">Connect</a></li>
+				  <li><a href="">Atlas</a></li>
+				  <li><a href="">Connect</a></li>
+				  <li><a href="">Atlas</a></li>
+				</ul>
+			  </div>
+			</div>
+		  </div>
+		  <div class="dropdown-menu" id="developer" data-sub="developer">
+			<div class="dropdown-menu__content">
+			  <div class="top-section">
+				<div class="col-2">
+				  <div>
+					<h2 class="menu-title">Countdown principali</h2>
+					<ul>
+					  <li><a href="Lucca.html">Lucca</a></li>
+					  <li><a href="18.html">18esimo</a></li>
+					  <li><a href="milan.html">Milan</a></li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  <div class="bottom-section info">
+				<p>Questa &#232; la pagina dedicata alle date importanti e a quanto manca ad esse</p>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>	
+</header>
+  
+  
 
-		<script>
-			// Set the date we're counting down to
-			var countDownDate = new Date("Nov 1, 2018 00:00:00").getTime();
+    <script  src="js/index.js"></script>
 
-			// Update the count down every 1 second
-			var x = setInterval(function() {
 
-				// Get todays date and time
-				var now = new Date().getTime();
-				
-				// Find the distance between now and the count down date
-				var distance = countDownDate - now;
-				
-				// Time calculations for days, hours, minutes and seconds
-				var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-				var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-				var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-				var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-				
-				// Output the result in an element with id="demo"
-			
-				document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-				+ minutes + "m " + seconds + "s ";
-				
-				// If the count down is over, write some text 
-				if (distance < 0) {
-					clearInterval(x);
-					document.getElementById("demo").innerHTML = "EXPIRED";
-				}
-			}, 1000);
-		</script>
 
-	</body>
+
+</body>
+
 </html>
